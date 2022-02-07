@@ -2,7 +2,6 @@ import asyncio
 from time import time
 from datetime import datetime
 from modules.helpers.filters import command
-from modules.helpers.command import commandpro
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -30,7 +29,7 @@ async def _human_time_duration(seconds):
     
    
 
-@Client.on_message(command("start") & filters.private & ~filters.edited)
+@Client.on_message(command("/start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/c6e1041c6c9a12913f57a.png",
@@ -59,7 +58,7 @@ async def start_(client: Client, message: Message):
     )
     
     
-@Client.on_message(commandpro(["/start", "/alive", "aditya"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["/start", "/alive", "aditya"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/c6e1041c6c9a12913f57a.png",
@@ -75,7 +74,7 @@ async def start(client: Client, message: Message):
     )
 
 
-@Client.on_message(commandpro(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/c6e1041c6c9a12913f57a.png",
