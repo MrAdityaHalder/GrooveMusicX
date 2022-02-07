@@ -38,7 +38,7 @@ async def ytdl(link: str):
     return 0, stderr
 
 
-@Client.on_message(command(["/play", "/play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["/play", f"/play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
@@ -129,7 +129,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ",
+                            text="🥀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ🔥",
                             url=f"https://t.me/adityadiscus")
 
                 ]
@@ -162,7 +162,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ",
+                            text="🥀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ🔥",
                             url=f"https://t.me/adityadiscus")
 
                 ]
@@ -211,7 +211,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ",
+                            text="🥀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ🔥",
                             url=f"https://t.me/adityadiscus")
 
                 ]
@@ -240,7 +240,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ",
+                            text="🥀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ🔥",
                             url=f"https://t.me/adityadiscus")
 
                 ]
@@ -289,7 +289,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ",
+                            text="🥀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ🔥",
                             url=f"https://t.me/adityadiscus")
 
                 ]
@@ -318,7 +318,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ",
+                            text="🥀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ🔥",
                             url=f"https://t.me/adityadiscus")
 
                 ]
