@@ -10,7 +10,7 @@ from modules.design.thumbnail import thumb
 from modules.helpers.filters import command, other_filters
 from modules.clientbot.queues import QUEUE, add_to_queue
 from modules.clientbot import call_py, user
-from modules.utils import bash
+from modules.clientbot.utils import bash
 from modules.config import BOT_USERNAME, IMG_5
 from youtubesearchpython import VideosSearch
 
