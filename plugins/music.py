@@ -103,7 +103,7 @@ async def play(c: Client, m: Message):
             )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("📥 **downloading audio...**")
+            suhu = await replied.reply("📥 **Ɗøωŋɭøɑɗɩŋʛ ...**")
             dl = await replied.download()
             link = replied.link
             
@@ -139,7 +139,7 @@ async def play(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=buttons,
-                    caption=f"**💥 Ɠrɵɵvɘ🤞Ʌɗɗɘɗ 💿 Søɳʛ❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{pos}` 🌷 ...**",
+                    caption=f"**💥 Ɠrɵɵvɘ🤞Ʌɗɗɘɗ 💿 Nøω❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{pos}` 🌷 ...**",
                 )
             else:
                 try:
@@ -198,8 +198,8 @@ async def play(c: Client, m: Message):
                     thumbnail = search[3]
                     userid = m.from_user.id
                     image = await thumb(thumbnail, title, userid)
-                    veez, ytlink = await ytdl(url)
-                    if veez == 0:
+                    aditya, ytlink = await ytdl(url)
+                    if aditya == 0:
                         await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
@@ -221,7 +221,7 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
-                                caption=f"**💥 Ɠrɵɵvɘ🤞Ʌɗɗɘɗ 💿 Søɳʛ❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{pos}` 🌷 ...**",
+                                caption=f"**💥 Ɠrɵɵvɘ🤞Ʌɗɗɘɗ 💿 Nøω❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{pos}` 🌷 ...**",
                             )
                         else:
                             try:
@@ -277,8 +277,8 @@ async def play(c: Client, m: Message):
                 thumbnail = search[3]
                 userid = m.from_user.id
                 image = await thumb(thumbnail, title, userid)
-                veez, ytlink = await ytdl(url)
-                if veez == 0:
+                aditya, ytlink = await ytdl(url)
+                if aditya == 0:
                     await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
@@ -298,7 +298,7 @@ async def play(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=buttons,
-                            caption=f"**💥 Ɠrɵɵvɘ🤞Ʌɗɗɘɗ 💿 Søɳʛ❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{pos}` 🌷 ...**",
+                            caption=f"**💥 Ɠrɵɵvɘ🤞Ʌɗɗɘɗ 💿 Nøω❗️\n🔊 Ʌʈ 💞 Ƥøsɩʈɩøɳ » `{pos}` 🌷 ...**",
                         )
                     else:
                         try:
