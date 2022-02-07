@@ -4,7 +4,7 @@ import re
 import asyncio
 
 from modules.config import BOT_USERNAME, IMG_1, IMG_2, IMG_5
-from module.design.thumbnail import thumb
+from modules.design.thumbnail import thumb
 from modules.helpers.filters import command, other_filters
 from modules.clientbot.queues import QUEUE, add_to_queue
 from modules.clientbot import call_py, user
