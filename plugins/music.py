@@ -119,11 +119,10 @@ async def play(c: Client, m: Message):
                 songname = "Audio"
             
             if chat_id in QUEUE:
-                ctitle = m.chat.title
                 title = songname
                 userid = m.from_user.id
                 thumbnail = f"{IMG_5}"
-                image = await thumb(thumbnail, title, userid, ctitle)
+                image = await thumb(thumbnail, title, userid)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 buttons = InlineKeyboardMarkup(
@@ -144,11 +143,10 @@ async def play(c: Client, m: Message):
                 )
             else:
                 try:
-                    ctitle = m.chat.title
                     title = songname
                     userid = m.from_user.id
                     thumbnail = f"{IMG_5}"
-                    image = await thumb(thumbnail, title, userid, ctitle)
+                    image = await thumb(thumbnail, title, userid)
                     await suhu.edit("🔄 **Ƥɤøƈɘssɩŋʛ ...**")
                     await call_py.join_group_call(
                         chat_id,
@@ -199,8 +197,7 @@ async def play(c: Client, m: Message):
                     duration = search[2]
                     thumbnail = search[3]
                     userid = m.from_user.id
-                    ctitle = m.chat.title
-                    image = await thumb(thumbnail, title, userid, ctitle)
+                    image = await thumb(thumbnail, title, userid)
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
                         await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
@@ -279,8 +276,7 @@ async def play(c: Client, m: Message):
                 duration = search[2]
                 thumbnail = search[3]
                 userid = m.from_user.id
-                ctitle = m.chat.title
-                image = await thumb(thumbnail, title, userid, ctitle)
+                image = await thumb(thumbnail, title, userid)
                 veez, ytlink = await ytdl(url)
                 if veez == 0:
                     await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
