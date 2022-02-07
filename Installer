@@ -4,9 +4,9 @@ ffmpeg-python
 py-tgcalls
 pyrogram
 youtube-search-python
-git+https://github.com/MrAdityaXD/downloader@master
+git+https://github.com/adityacheats/downloader@master
 lyricsgenius
-git+https://github.com/MrAdityaXD/speedo@master
+git+https://github.com/adityacheats/speedo@master
 youtube-search
 python-dotenv
 dnspython
