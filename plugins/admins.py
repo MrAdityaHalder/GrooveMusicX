@@ -16,7 +16,7 @@ from pyrogram.types import (
 )
 
 
-@Client.on_message(command(["reload", f"reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["/reload", f"/reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def update_admin(client, message):
     global admins
@@ -26,11 +26,11 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **reloaded correctly !**\n✅ **Admin list** has **updated !**"
+        "✅ **Ʌɗɱɩŋ Lɩst Uƥɗɑtɘɗ ...**"
     )
 
 
-@Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
+@Client.on_message(command(["/skip", f"/skip@{BOT_USERNAME}", "/vskip"]) & other_filters)
 @authorized_users_only
 async def skip(c: Client, m: Message):
     await m.delete()
@@ -39,11 +39,11 @@ async def skip(c: Client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await c.send_message(chat_id, "❌ nothing is currently playing")
+            await c.send_message(chat_id, "**❌ Ɲøtɦɩŋʛ ɩs Ƈʋrrɘŋtɭy Ƥɭɑyɩŋʛ ...**")
         elif op == 1:
-            await c.send_message(chat_id, "» There's no more music in queue to skip, userbot leaving video chat.")
+            await c.send_message(chat_id, "❌ Eɱƥty Qʋɘʋɘ, Lɘɑⱱɩŋʛ VƇ ...")
         elif op == 2:
-            await c.send_message(chat_id, "🗑️ Clearing the **Queues**\n\n**• userbot** leaving video chat.")
+            await c.send_message(chat_id, "**🗑️ Ƈɭɘɑrɩŋʛ Queues, Lɘɑⱱɩŋʛ VƇ ...**")
         else:
             buttons = InlineKeyboardMarkup(
             [
@@ -63,11 +63,11 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=buttons,
-                caption=f"⏭ **Skipped** to the next track.\n\n🗂 **Now Playing:** [{op[0]}]({op[1]})\n💭",
+                caption=f"⏭ **Sƙɩƥƥɘɗ Ɲøω Ƥɭɑyɩŋʛ » ** [{op[0]}]({op[1]})\n💭",
             )
     else:
         skip = m.text.split(None, 1)[1]
-        OP = "🗑 **removed song from queue:**"
+        OP = "🗑 **Ʀɘɱɵⱱɘɗ Sɵŋʛ Frøɱ Qʋɘʋɘ:**"
         if chat_id in QUEUE:
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
@@ -84,7 +84,7 @@ async def skip(c: Client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
+    command(["/stop", f"/stop@{BOT_USERNAME}", "/end", f"/end@{BOT_USERNAME}", "/vstop"])
     & other_filters
 )
 @authorized_users_only
@@ -94,15 +94,15 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ The userbot has disconnected from the video chat.")
+            await m.reply("**✅ Ɗɩsƈøŋɘƈtɘɗ Fɤøɱ VƇ ...**")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing is streaming**")
+        await m.reply("❌ **Ɲøtɦɩŋʛ ɩs Strɘɑɱɩŋʛ ...**")
 
 
 @Client.on_message(
-    command(["pause", f"pause@{BOT_USERNAME}", "vpause"]) & other_filters
+    command(["/pause", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -111,16 +111,16 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                "⏸ **Track paused.**\n\n• **To resume the stream, use the**\n» /resume command."
+                "⏸ **Ƥɑʋsɘɗ ...**"
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing is streaming**")
+        await m.reply("❌ **Ɲøtɦɩŋʛ ɩs Strɘɑɱɩŋʛ ...**")
 
 
 @Client.on_message(
-    command(["resume", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters
+    command(["/resume", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -129,9 +129,9 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▶️ **Track resumed.**\n\n• **To pause the stream, use the**\n» /pause command."
+                "▶️ **Ʀɘsʋɱɘɗ ...**"
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing is streaming**")
+        await m.reply("❌ **Ɲøtɦɩŋʛ ɩs Strɘɑɱɩŋʛ ...**")
