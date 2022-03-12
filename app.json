@@ -1,7 +1,7 @@
 {
     "name": "GrooveMusicX",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by PyTgCalls and Pyrogram",
-    "logo": "https://telegra.ph/file/1c41ded2dd871eb36bd7e.png",
+    "logo": "https://te.legra.ph/file/5073859a7014b11baf93a.jpg",
     "keywords": [
         "py-tgcalls",
         "telegram bot",
@@ -38,7 +38,7 @@
             "description": "fill with the assistant username account without @",
             "required": true
         },
-        "SESSION_NAME": {
+        "STRING_SESSION": {
             "description": "fill with the pyrogram String Session",
             "required": true
         },
@@ -46,11 +46,6 @@
             "description": "list of user id to be added to sudo member list, or just fill with your id",
             "required": true,
             "value": "702821224"
-        },
-        "UPSTREAM_REPO": {
-            "description": "This is needed for update feature, if you deployed forked repo put your forked repo link here, if not just leave it as it",
-            "required": true,
-            "value": "https://github.com/MeAdityaHalder/GrooveMusicX"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
@@ -61,11 +56,6 @@
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
             "value": "AdityaServer"
-        },
-        "OWNER_NAME": {
-            "description": "fill with your telegram account username without @",
-            "required": true,
-            "value": "AdityaHalder"
         },
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",
