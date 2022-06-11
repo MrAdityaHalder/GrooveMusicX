@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "kaal" ]
+    branches: [ "aditya" ]
   pull_request:
-    branches: [ "kaal" ]
+    branches: [ "aditya" ]
   schedule:
     - cron: '0 */6 * * *'
 jobs:
