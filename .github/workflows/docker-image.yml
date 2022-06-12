@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "aditya" ]
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '* */6 * * *'
 jobs:
 
   build:
